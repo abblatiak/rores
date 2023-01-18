@@ -1,0 +1,10 @@
+Run locally, while logged into AWS
+
+git clone https://github.com/abblatiak/rores.git
+cd rores
+rm -rf .git
+terraform init
+terraform plan -out plan.out
+terraform apply "plan.out"
+
+docker build https://github.com/frank-borkin/rolax.git#main:rolax
